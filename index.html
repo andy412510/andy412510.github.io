@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>我的個人網站</title>
+    <meta charset="UTF-8">
+    <title>Andy's Personal Website - About me</title>
+    <style>
+        /* 基礎樣式設定 */
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+
+        /* 頂部橫向佈局：大頭照 + 按鈕 */
+        .top-container {
+            display: flex;
+            align-items: center; /* 垂直置中 */
+            gap: 30px;          /* 圖片與按鈕之間的間距 */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        /* 大頭照樣式 */
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 圓形頭像 */
+            object-fit: cover;
+            background-color: #ccc; /* 圖片載入前的暫存色 */
+        }
+
+        /* 導覽按鈕樣式 */
+        .nav-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>歡迎來到我的 GitHub Pages 網站！</h1>
-    <p>這是我的第一步。</p>
+
+    <header class="top-container">
+        <img src="figures/headshot.jpg" alt="My headshot" class="avatar">
+
+        <nav class="nav-buttons">
+            <a href="index.html">About me</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="researches.html">Researches</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About me</h1>
+        <p>你好！我是 Andy。這是我的個人網站首頁。</p>
+        <p>在這裡你可以放置你的自我介紹、研究興趣或是聯絡方式。</p>
+    </main>
+
 </body>
 </html>
