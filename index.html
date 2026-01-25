@@ -34,23 +34,23 @@
             margin-bottom: 30px;
         }
 
-        /* 小大頭照：由 80px 放大至 160px */
+        /* 大頭照：160px (原 80px 的 2 倍) */
         .avatar {
             width: 160px;
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #007bff; /* 稍微加粗邊框以匹配尺寸 */
+            border: 3px solid #007bff;
         }
 
         /* 導覽按鈕區域 */
         .nav-buttons {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap; /* 字體變大，預防換行 */
+            flex-wrap: wrap;
         }
 
-        /* 按鈕字體：由 14px 放大至 28px */
+        /* 按鈕字體：28px (原 14px 的 2 倍) */
         .nav-buttons a {
             text-decoration: none;
             background-color: #007bff;
@@ -75,7 +75,7 @@
             margin-top: 20px;
         }
 
-        /* 圖片與圖說的包裝容器 */
+        /* 圖片與圖說容器 */
         .image-wrapper {
             display: flex;
             flex-direction: column;
@@ -90,7 +90,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        /* 圖說文字樣式 */
         .image-caption {
             font-size: 16px;
             color: #666;
@@ -107,6 +106,7 @@
             margin-bottom: 15px;
         }
 
+        /* 響應式設計 */
         @media (max-width: 768px) {
             .top-container, .intro-section {
                 flex-direction: column;
@@ -129,7 +129,7 @@
 
             <nav class="nav-buttons">
                 <a href="index.html">About me</a>
-                <a href="publications.html">Publications</a>
+                <a href="https://scholar.google.com.tw/citations?user=2bgs_aUAAAAJ&hl=zh-TW" target="_blank" rel="noopener noreferrer">Publications</a>
                 <a href="teaching.html">Teaching</a>
                 <a href="researches.html">Researches</a>
             </nav>
@@ -146,6 +146,8 @@
                     <p>Hello friends! I'm 朱政安, but you can call me Andy. Hope you find what you're looking for here :)</p>
                     <p>
                         Assistant Professor, Department of Artificial Intelligence, Tamkang University (2024-present)
+                    </p>
+                    <p>
                         PhD in Computer Science and Information Engineering, National Chung Cheng University (July 2024)
                     </p>
                 </div>
