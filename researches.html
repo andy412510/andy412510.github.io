@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Personal Website - Researches</title>
     <style>
-        /* 1. 全域樣式設定 (維持與範例一致) */
+        /* 1. 全域樣式設定 */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
@@ -64,17 +64,17 @@
             transform: translateY(-2px);
         }
 
-        /* 4. 研究內容區域：Label 已由 intro 改為 researches */
+        /* 4. 研究內容區域*/
         .researches-section {
             display: flex;
             align-items: flex-start;
             gap: 45px;
-            margin-bottom: 60px; /* 每個研究塊之間的垂直間距 */
+            margin-bottom: 60px; 
             padding-bottom: 40px;
-            border-bottom: 1px dashed #eee; /* 加入虛線分隔線 */
+            border-bottom: 1px dashed #eee; 
         }
 
-        /* 最後一個區塊不顯示底線 */
+        
         .researches-section:last-child {
             border-bottom: none;
             margin-bottom: 0;
@@ -87,7 +87,6 @@
             gap: 10px;
         }
 
-        /* 圖片大小維持 420px */
         .researches-image {
             width: 420px;
             height: auto;
@@ -117,7 +116,6 @@
             color: #007bff;
         }
 
-        /* 響應式設計 */
         @media (max-width: 768px) {
             .top-container, .researches-section {
                 flex-direction: column;
@@ -147,17 +145,18 @@
         </header>
 
         <main>
-            <section class="researches-section">
+			<section class="researches-section">
                 <div class="researches-image-wrapper">
-                    <img src="figures/SAM adapters.png" alt="Research Project 1" class="researches-image">
+                    <img src="figures/SAM adapters.png" alt="SAM Adapters" class="researches-image">
+                    <div class="image-caption">Medical Image Segmentation, 2024</div>
                 </div>
                 <div class="researches-text">
                     <h2>An efficient SAM Adapters framework for medical image segmentation</h2>
-                    <p>
-					● Overcomes the domain gap for the SAM in medical images.<br>
-					● Adapter design to reduce the computation.<br>
-					● Handles fuzzy boundaries effectively.
-					</p>
+                    <ul>
+                        <li>Overcomes the domain gap for the SAM in medical images.</li>
+                        <li>Adapter design to reduce the computation.</li>
+                        <li>Handles fuzzy boundaries effectively.</li>
+                    </ul>
                 </div>
             </section>
 
