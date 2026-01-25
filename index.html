@@ -2,64 +2,154 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Personal Website - About me</title>
     <style>
-        /* 基礎樣式設定 */
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-
-        /* 頂部橫向佈局：大頭照 + 按鈕 */
-        .top-container {
-            display: flex;
-            align-items: center; /* 垂直置中 */
-            gap: 30px;          /* 圖片與按鈕之間的間距 */
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
+        /* 1. 全域樣式設定 */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
+            background-color: #f4f7f6; /* 淺灰色底色 */
+            color: #333;
         }
 
-        /* 大頭照樣式 */
+        /* 2. 置中容器：限制最大寬度並水平置中 */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* 輕微陰影提升質感 */
+            border-radius: 12px;
+        }
+
+        /* 3. 頂部標頭區域：小頭照 + 導覽列 */
+        .top-container {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* 小大頭照樣式 */
         .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* 圓形頭像 */
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
             object-fit: cover;
-            background-color: #ccc; /* 圖片載入前的暫存色 */
+            border: 2px solid #007bff;
         }
 
         /* 導覽按鈕樣式 */
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
         .nav-buttons a {
-            display: inline-block;
             text-decoration: none;
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: background 0.3s;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         .nav-buttons a:hover {
             background-color: #0056b3;
+            transform: translateY(-2px); /* 懸停時輕微上浮 */
+        }
+
+        /* 4. 主要內容區域：大圖 + 右側簡介 */
+        .intro-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 45px;
+            margin-top: 20px;
+        }
+
+        /* 左側大圖樣式 */
+        .intro-image {
+            width: 420px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* 右側文字區塊樣式 */
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #222;
+        }
+
+        .intro-text p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* 響應式設計：當螢幕寬度小於 768px 時自動切換為垂直排列 */
+        @media (max-width: 768px) {
+            .top-container, .intro-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .intro-image {
+                width: 100%;
+                max-width: 400px;
+            }
+            .nav-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header class="top-container">
-        <img src="figures/headshot.jpg" alt="My headshot" class="avatar">
+    <div class="container">
+        
+        <header class="top-container">
+            <img src="figures/headshot.jpg" alt="Andy's Headshot" class="avatar">
 
-        <nav class="nav-buttons">
-            <a href="index.html">About me</a>
-            <a href="publications.html">Publications</a>
-            <a href="teaching.html">Teaching</a>
-            <a href="researches.html">Researches</a>
-        </nav>
-    </header>
+            <nav class="nav-buttons">
+                <a href="index.html">About me</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="researches.html">Researches</a>
+            </nav>
+        </header>
 
-    <main>
-        <h1>About me</h1>
-        <p>你好！我是 Andy。這是我的個人網站首頁。</p>
-        <p>在這裡你可以放置你的自我介紹、研究興趣或是聯絡方式。</p>
-    </main>
+        <main>
+            <section class="intro-section">
+                <img src="figures/Grand Canyon.jpg" alt="Grand Canyon" class="intro-image">
+
+                <div class="intro-text">
+                    <p>你好！我是 Andy，歡迎來到我的個人網站。</p>
+                    <p>
+                        我目前就讀於淡江大學人工智慧學系。我對機器學習、電腦視覺以及網頁技術充滿熱情。
+                        在這裡，我會記錄並分享我在學術研究與開發專案中的點點滴滴。
+                    </p>
+                    <p>
+                        本網站由 GitHub Pages 託管，這是我作為資訊工程學生展示專業技能的第一步。
+                        如果你有任何問題或合作意願，歡迎透過導覽列查看更多資訊並與我聯繫。
+                    </p>
+                </div>
+            </section>
+        </main>
+
+    </div>
 
 </body>
 </html>
