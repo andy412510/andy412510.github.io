@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Personal Website - Teaching</title>
     <style>
-        /* 1. 全域樣式設定 (維持與 index.html 一致) */
+        /* 1. 全域樣式設定 (維持與範例 index.html 一致) */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
@@ -34,7 +34,7 @@
             margin-bottom: 30px;
         }
 
-        /* 大頭照：160px (原 80px 的 2 倍) */
+        /* 大頭照：160px (範例設定) */
         .avatar {
             width: 160px;
             height: 160px;
@@ -43,7 +43,7 @@
             border: 3px solid #007bff;
         }
 
-        /* 導覽按鈕：字體 28px (原 14px 的 2 倍) */
+        /* 導覽按鈕：字體 28px (範例設定) */
         .nav-buttons {
             display: flex;
             gap: 15px;
@@ -66,7 +66,7 @@
             transform: translateY(-2px);
         }
 
-        /* 4. 主要內容區域：大圖 + 右側課程簡介 */
+        /* 4. 主要內容區域 */
         .intro-section {
             display: flex;
             align-items: flex-start;
@@ -81,21 +81,21 @@
             gap: 10px;
         }
 
-        /* 教學頁面專用圖片樣式 (Logo) */
+        /* 教學頁面圖片：同步調整為 420px (與範例主圖一致) */
         .teaching {
-            width: 280px; /* 稍微放大 Logo 以匹配頁面比例 */
+            width: 420px; 
             height: auto;
-            border-radius: 0; /* Logo 保持原狀，不使用圓形 */
+            border-radius: 0;
         }
 
-        /* 課程文字內容樣式：解決粗體不明顯的問題 */
         .teaching-text {
             flex: 1;
         }
 
+        /* 內文字體：同步調整為 18px (與範例一致) */
         .teaching-text p {
-            font-size: 20px; /* 稍微放大字體，讓內容更易讀 */
-            color: #444;
+            font-size: 18px; 
+            color: #555;
             margin-bottom: 25px;
             line-height: 1.8;
         }
@@ -115,7 +115,7 @@
             }
             .teaching {
                 width: 100%;
-                max-width: 250px;
+                max-width: 400px;
             }
         }
     </style>
