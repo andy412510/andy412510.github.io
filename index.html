@@ -10,62 +10,64 @@
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
             line-height: 1.6; 
-            background-color: #f4f7f6; /* 淺灰色底色 */
+            background-color: #f4f7f6; 
             color: #333;
         }
 
-        /* 2. 置中容器：限制最大寬度並水平置中 */
+        /* 2. 置中容器 */
         .container {
             max-width: 1000px;
             margin: 40px auto;
             background-color: #ffffff;
             padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* 輕微陰影提升質感 */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
             border-radius: 12px;
         }
 
-        /* 3. 頂部標頭區域：小頭照 + 導覽列 */
+        /* 3. 頂部標頭區域 */
         .top-container {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 30px;
             border-bottom: 2px solid #eeeeee;
             padding-bottom: 25px;
             margin-bottom: 30px;
         }
 
-        /* 小大頭照樣式 */
+        /* 小大頭照：由 80px 放大至 160px */
         .avatar {
-            width: 80px;
-            height: 80px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #007bff;
+            border: 3px solid #007bff; /* 稍微加粗邊框以匹配尺寸 */
         }
 
-        /* 導覽按鈕樣式 */
+        /* 導覽按鈕區域 */
         .nav-buttons {
             display: flex;
-            gap: 12px;
+            gap: 15px;
+            flex-wrap: wrap; /* 字體變大，預防換行 */
         }
 
+        /* 按鈕字體：由 14px 放大至 28px */
         .nav-buttons a {
             text-decoration: none;
             background-color: #007bff;
             color: white;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 28px; 
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .nav-buttons a:hover {
             background-color: #0056b3;
-            transform: translateY(-2px); /* 懸停時輕微上浮 */
+            transform: translateY(-2px);
         }
 
-        /* 4. 主要內容區域：大圖 + 右側簡介 */
+        /* 4. 主要內容區域 */
         .intro-section {
             display: flex;
             align-items: flex-start;
@@ -73,7 +75,14 @@
             margin-top: 20px;
         }
 
-        /* 左側大圖樣式 */
+        /* 圖片與圖說的包裝容器 */
+        .image-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
         .intro-image {
             width: 420px;
             height: auto;
@@ -81,24 +90,23 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        /* 右側文字區塊樣式 */
+        /* 圖說文字樣式 */
+        .image-caption {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+
         .intro-text {
             flex: 1;
         }
 
-        .intro-text h2 {
-            margin-top: 0;
-            font-size: 28px;
-            color: #222;
-        }
-
         .intro-text p {
-            font-size: 17px;
+            font-size: 18px;
             color: #555;
             margin-bottom: 15px;
         }
 
-        /* 響應式設計：當螢幕寬度小於 768px 時自動切換為垂直排列 */
         @media (max-width: 768px) {
             .top-container, .intro-section {
                 flex-direction: column;
@@ -108,10 +116,6 @@
             .intro-image {
                 width: 100%;
                 max-width: 400px;
-            }
-            .nav-buttons {
-                flex-wrap: wrap;
-                justify-content: center;
             }
         }
     </style>
@@ -133,7 +137,10 @@
 
         <main>
             <section class="intro-section">
-                <img src="figures/Grand Canyon.jpg" alt="Grand Canyon" class="intro-image">
+                <div class="image-wrapper">
+                    <img src="figures/Grand Canyon.jpg" alt="Grand Canyon" class="intro-image">
+                    <div class="image-caption">Grand Canyon, 2024</div>
+                </div>
 
                 <div class="intro-text">
                     <p>你好！我是 Andy，歡迎來到我的個人網站。</p>
@@ -148,7 +155,6 @@
                 </div>
             </section>
         </main>
-
     </div>
 
 </body>
