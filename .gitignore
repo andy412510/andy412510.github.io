@@ -187,6 +187,6 @@ poetry.toml
 
 market_512.sh
 msmt_512.sh
-figures/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,python
