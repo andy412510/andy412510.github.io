@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Personal Website - Teaching</title>
     <style>
-        /* 1. 全域樣式設定 (維持與範例 index.html 一致) */
+        /* 1. 全域樣式設定 */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
@@ -34,16 +34,15 @@
             margin-bottom: 30px;
         }
 
-        /* 大頭照： (範例設定) */
+        /* 修正 1：固定大頭照為 160px 並防止變形 */
         .avatar {
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: cover; /* 關鍵：確保圖片比例不跑掉 */
             border: 3px solid #007bff;
         }
 
-        /* 導覽按鈕：字體 28px (範例設定) */
         .nav-buttons {
             display: flex;
             gap: 15px;
@@ -81,9 +80,9 @@
             gap: 10px;
         }
 
-        /* 教學頁面圖片 */
+        /* 修正 2：縮小 Tamkang Logo 為 200px */
         .teaching {
-            width: 280px; 
+            width: 200px; 
             height: auto;
             border-radius: 0;
         }
@@ -92,7 +91,6 @@
             flex: 1;
         }
 
-        /* 內文字體：同步調整為 18px (與範例一致) */
         .teaching-text p {
             font-size: 18px; 
             color: #555;
@@ -100,13 +98,11 @@
             line-height: 1.8;
         }
 
-        /* 強制定義 strong 標籤為深黑色粗體 */
         .teaching-text strong {
             font-weight: 700;
             color: #000;
         }
 
-        /* 響應式設計 */
         @media (max-width: 768px) {
             .top-container, .intro-section {
                 flex-direction: column;
@@ -115,7 +111,7 @@
             }
             .teaching {
                 width: 100%;
-                max-width: 400px;
+                max-width: 180px;
             }
         }
     </style>
