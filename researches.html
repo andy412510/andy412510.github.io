@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's Personal Website - Researches</title>
+    <style>
+        /* 1. 全域樣式設定 (維持與範例一致) */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
+            background-color: #f4f7f6; 
+            color: #333;
+        }
+
+        /* 2. 置中容器 */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+            border-radius: 12px;
+        }
+
+        /* 3. 頂部標頭區域 */
+        .top-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 28px; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* 4. 研究內容區域：Label 已由 intro 改為 researches */
+        .researches-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 45px;
+            margin-bottom: 60px; /* 每個研究塊之間的垂直間距 */
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #eee; /* 加入虛線分隔線 */
+        }
+
+        /* 最後一個區塊不顯示底線 */
+        .researches-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .researches-image-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 圖片大小維持 420px */
+        .researches-image {
+            width: 420px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .researches-text {
+            flex: 1;
+        }
+
+        /* 內文字體維持 18px */
+        .researches-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .researches-text h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .top-container, .researches-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .researches-image {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="top-container">
+            <img src="figures/headshot.jpg" alt="Andy's Headshot" class="avatar">
+
+            <nav class="nav-buttons">
+                <a href="index.html">About me</a>
+                <a href="https://scholar.google.com.tw/citations?user=2bgs_aUAAAAJ&hl=zh-TW" target="_blank" rel="noopener noreferrer">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="researches.html">Researches</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="researches-section">
+                <div class="researches-image-wrapper">
+                    <img src="figures/research1.jpg" alt="Research Project 1" class="researches-image">
+                    <div class="image-caption">Medical Image Segmentation, 2024</div>
+                </div>
+                <div class="researches-text">
+                    <h2>Medical SAM Adapter</h2>
+                    <p>這項研究專注於如何將 Segment Anything Model (SAM) 應用於醫療影像。我們開發了一個新型的 Adapter 結構，顯著提升了在 3D 醫學影像上的分割精度。</p>
+                </div>
+            </section>
+
+            <section class="researches-section">
+                <div class="researches-image-wrapper">
+                    <img src="figures/research2.jpg" alt="Research Project 2" class="researches-image">
+                    <div class="image-caption">Unsupervised Learning, 2023</div>
+                </div>
+                <div class="researches-text">
+                    <h2>Uncertainty-Gated Learning</h2>
+                    <p>我們提出了一種基於不確定性門控的學習機制，這能讓模型在面對雜訊資料時具有更強的魯棒性，並在非監督式學習場景下達到領先的效能。</p>
+                </div>
+            </section>
+
+            <section class="researches-section">
+                <div class="researches-image-wrapper">
+                    <img src="figures/research3.jpg" alt="Research Project 3" class="researches-image">
+                    <div class="image-caption">Computer Vision Application, 2022</div>
+                </div>
+                <div class="researches-text">
+                    <h2>Real-time Traffic Monitoring</h2>
+                    <p>利用深度卷積神經網路實作即時交通監控系統，能夠準確分類車輛類型並預測壅塞趨勢，目前已應用於多個智慧城市專案中。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
